@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports: 
+      - "5000:5000" # porta acessada pelo navegador
+    volumes:
+      - .:/code 
+    environment:
+      FLASK_DEBUG: "true" # Faz com que o docker sempre atualize a cada mudança
+  redis: 
+    image: "redis:alpine"
+
+
