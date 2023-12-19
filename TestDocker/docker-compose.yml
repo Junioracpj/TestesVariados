@@ -9,7 +9,5 @@ services:
       - .:/code 
     environment:
       FLASK_DEBUG: "true" # Faz com que o docker sempre atualize a cada mudança
-  redis: 
-    image: "redis:alpine"
 
 
